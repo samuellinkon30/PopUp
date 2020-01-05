@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">	
+	<script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+	<title>Aprendendo Jquery</title>
+
+
+</head>
+<body>
+
+	<div>lorem ipsakjdsakjsdajshdashdalskhdakjshdakjhdsahsdlashdajksdhakjsdhakjsdhakjdhalsdhasdlj</div>
+	<div class="poppup">
+		<h1 class="txt">Example</h1>
+		<h2 class="fechar"><a href="javascript:fechar();">X</a></h2>
+		<center>
+			<a href="#"><img class="img-popup" src="popup-image.jpg"></a>
+		</center>
+	</div>
+
+
+</body>
+</html>
+<style>
+
+	.img-popup
+	{
+		width: 100%;
+	}
+	
+	.poppup
+	{
+		animation-duration: 1s;
+		animation-delay: 0;
+		display: none;
+		height: 500px;
+		width: 500px;
+		background-color: white;
+		opacity: 0.8;
+		color:white;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		padding: 10px;
+		color: black;
+	}
+	.fechar
+	{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		animation-duration: 1s;
+		animation-delay: 0;
+	}
+</style>
+
+<script>
+	$(document).ready( function(){
+
+		$(".poppup").show();
+		$(".poppup").addClass('animated bounceInLeft');
+		$("body").css("background-color","#000000c7");
+		}
+	);
+
+	function fechar(){
+		$(".poppup").addClass('animated bounceInDown');
+		$(".poppup").hide("500ms");
+		$("body").css("background-color","white");
+
+	};
+</script>
